@@ -97,21 +97,23 @@ $	python -m src.main -mode train -gpu 0 -embedding roberta -emb_name roberta-bas
 If you use our data or code, please cite our work:
 
 ```
-@inproceedings{patel-etal-2021-nlp,
-    title = "Are {NLP} Models really able to Solve Simple Math Word Problems?",
-    author = "Patel, Arkil  and
-      Bhattamishra, Satwik  and
-      Goyal, Navin",
-    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
-    month = jun,
-    year = "2021",
-    address = "Online",
+@inproceedings{gaur-saunshi-2023-reasoning,
+    title = "Reasoning in Large Language Models Through Symbolic Math Word Problems",
+    author = "Gaur, Vedant  and
+      Saunshi, Nikunj",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2021.naacl-main.168",
-    doi = "10.18653/v1/2021.naacl-main.168",
-    pages = "2080--2094",
-    abstract = "The problem of designing NLP solvers for math word problems (MWP) has seen sustained research activity and steady gains in the test accuracy. Since existing solvers achieve high performance on the benchmark datasets for elementary level MWPs containing one-unknown arithmetic word problems, such problems are often considered {``}solved{''} with the bulk of research attention moving to more complex MWPs. In this paper, we restrict our attention to English MWPs taught in grades four and lower. We provide strong evidence that the existing MWP solvers rely on shallow heuristics to achieve high performance on the benchmark datasets. To this end, we show that MWP solvers that do not have access to the question asked in the MWP can still solve a large fraction of MWPs. Similarly, models that treat MWPs as bag-of-words can also achieve surprisingly high accuracy. Further, we introduce a challenge dataset, SVAMP, created by applying carefully chosen variations over examples sampled from existing datasets. The best accuracy achieved by state-of-the-art models is substantially lower on SVAMP, thus showing that much remains to be done even for the simplest of the MWPs.",
-}
+    url = "https://aclanthology.org/2023.findings-acl.364",
+    doi = "10.18653/v1/2023.findings-acl.364",
+    pages = "5889--5903",
+    abstract = "Large language models (LLMs) have revolutionized NLP by solving downstream tasks with little to no labeled data. Despite their versatile abilities, the larger question of their ability to reason remains ill-understood. This paper addresses reasoning in math word problems (MWPs) by studying symbolic versions of the numeric problems, since a symbolic expression is a {``}concise explanation{''} of the numeric answer. We create and use a symbolic version of the SVAMP dataset and find that GPT-3{'}s davinci-002 model also has good zero-shot accuracy on symbolic MWPs. To evaluate the faithfulness of the model{'}s reasoning, we go beyond accuracy and additionally evaluate the alignment between the final answer and the outputted reasoning, which correspond to numeric and symbolic answers respectively for MWPs. We explore a self-prompting approach to encourage the symbolic reasoning to align with the numeric answer, thus equipping the LLM with the ability to provide a concise and verifiable reasoning and making it more interpretable. Surprisingly, self-prompting also improves the symbolic accuracy to be higher than both the numeric and symbolic accuracies, thus providing an ensembling effect. The SVAMP-Sym dataset will be released for future research on symbolic math problems."
+},
 ```
 
-For any clarification, comments, or suggestions please contact [Arkil](http://arkilpatel.github.io/) or [Satwik](https://satwikb.com/).
+For any clarification, comments, or suggestions please contact [Vedant](https://vedantgaur.com/) or [Nikunj].
